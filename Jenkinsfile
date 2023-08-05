@@ -55,7 +55,7 @@ elasticsearch.host =192.168.1.85
 elasticsearch.port =9300
 elasticsearch.cluster=vprofile
 elasticsearch.node=vprofilenode
-EOT'''
+EOT'''  
             }
         }
         stage ('BUILD THE APPLICATION') {
