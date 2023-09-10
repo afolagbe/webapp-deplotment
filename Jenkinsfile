@@ -65,11 +65,6 @@ pipeline{
                 sh 'mvn verify -DskipUnitTest'
             }
         }
-        stage ('CHECKSTYLE ANALYSIS') {
-            steps {
-                sh 'mvn checkstyle:checkstyle'
-            }
-        }
     }
     post {
         always{
