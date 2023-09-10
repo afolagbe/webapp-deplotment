@@ -64,7 +64,7 @@ pipeline{
                 sh 'mvn checkstyle:checkstyle'
             }
         }
-        stage('upload to artifact'){
+        stage('upload war'){
             steps{
                 nexusArtifactUploader artifacts: [[artifactId: 'vprofile', classifier: '', file: 'target/vprofile-v2.war', type: 'war']], credentialsId: 'nexuslogin', groupId: 'com.visualpathit', nexusUrl: 'http://54.209.6.122:808', nexusVersion: 'nexus3', protocol: 'http', repository: 'Vpro-maven-central', version: 'v2'
             }
