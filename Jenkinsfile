@@ -66,7 +66,7 @@ pipeline{
         }
         stage('upload to artifact'){
             steps{
-                nexusArtifactUploader artifacts: [[artifactId: 'vprofile', classifier: '', file: 'target/vprofile-v2.war', type: 'war']], credentialsId: 'nexuslogin', groupId: 'com.visualpathit', nexusUrl: 'http://54.209.6.122:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'Vpro-maven-group', version: 'v2'
+                nexusArtifactUploader artifacts: [[artifactId: 'vprofile', classifier: '', file: 'target/vprofile-v2.war', type: 'war']], credentialsId: 'nexuslogin', groupId: 'com.visualpathit', nexusUrl: 'http://54.209.6.122:808', nexusVersion: 'nexus3', protocol: 'http', repository: 'Vpro-maven-central', version: 'v2'
             }
         }
     }
